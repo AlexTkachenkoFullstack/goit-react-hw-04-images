@@ -30,7 +30,7 @@ export function ImageGallery() {
             return
         }
 
-        const getImages = () => {
+    const getImages = () => {
         api.fetchImages(query, page)
             .then(response => { return response.json() })
             .then(({ hits, totalHits }) => {
