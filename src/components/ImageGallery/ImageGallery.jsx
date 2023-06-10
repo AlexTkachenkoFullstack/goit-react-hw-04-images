@@ -26,7 +26,7 @@ export function ImageGallery() {
     
 
     useEffect(() => {
-        if (!query || page===0) {
+        if (!query) {
             return
         }
 
@@ -39,11 +39,11 @@ export function ImageGallery() {
                 return; 
                 }
                   setImages(prevImages =>  [...prevImages, ...hits] );
-                setShowButton(page < Math.ceil(totalHits / PER_PAGE))
+                  setShowButton(page < Math.ceil(totalHits / PER_PAGE))
             }  
             )
-        .catch((error) => setError(error))
-        .finally(() => { setIsLoader(false); setInactiveButton(false) })
+            .catch((error) => setError(error))
+            .finally(() => { setIsLoader(false); setInactiveButton(false) })
     }
         setIsLoader(true);
         setInactiveButton(true)
