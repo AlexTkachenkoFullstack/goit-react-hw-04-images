@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { ImageGallery } from './ImageGallery/ImageGallery'
 import css from './App.module.css'
-export class App extends Component {
+export function App () {
 
-
-  render() {
     return(
     <div className={css.app}>
         <ImageGallery />
     </div>
   );
-  }
 };
